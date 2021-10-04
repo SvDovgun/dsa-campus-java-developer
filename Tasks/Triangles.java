@@ -7,6 +7,8 @@ class Triangles {
 			for (int j = 0; j < 3 ; j++){
 				if (i >= j){
 					System.out.print("*");
+				} else {
+					break;
 				}
 			}
 			System.out.println("");
