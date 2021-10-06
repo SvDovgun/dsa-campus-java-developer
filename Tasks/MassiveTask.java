@@ -77,7 +77,7 @@ class MassiveTask {
 		System.out.println("Below massive after sorted by ASC: ");
 		printInt(sortedMassiveIntAsc(intToSort));
 		
-		//14 task WRONG
+		//14 task
 		byte[] byteMas = {34, 43, 12, 94, 127, 34, 92, 94};
 		System.out.println("14 task: check if next massive has duplicated byte values");
 		printByte(byteMas);
@@ -93,7 +93,21 @@ class MassiveTask {
 		printInt(intMas2);
 		System.out.println("Result Massive:");
 		printInt(intMultiplyMass(intMas1, intMas2));
-
+		
+		//16 task
+		
+		//17 task
+		System.out.println("17 task: Input massive");
+		int[] arrayMas3 = {83, 62, 77, 93, 106, 8435, 353, 123, 657, 111};
+		printInt(arrayMas3);		
+		System.out.println("     Reversed Massive ");
+		printInt(reverseMassiveInt(arrayMas3));
+		
+		//18 task
+		System.out.println("18 task: Random Array with parameters");
+		printInt(randomArray(7, 25, 250));
+		
+		//19 task
 	}
 	
 	static void printCh(char[] array){
@@ -231,11 +245,11 @@ class MassiveTask {
 	
 	static boolean ifDuplicateValuesHas(byte[] array){
 		boolean result = false;
-		for(int i = array.length - 1; i > 0 ; i--){
-			for(int j = 0 ; j < i ; j++) {
-				if (array[j] == array[j+1] ) {
+		for(int i = 0; i < array.length ; i++){
+			for(int j = i+1 ; j < array.length - 1 ; j++) {
+				if (array[j] == array[j] ) {
 					result = true;
-					//break;
+					break;
 				} 
 			}
 		}	
@@ -251,6 +265,16 @@ class MassiveTask {
 		for(int i = 0; i < array.length ; i++){
 			array[i] = array1[i] * array2[i];
 		//	System.out.println("arrayChar[ " + i +"] = " + arrayChar[i] + "; ");
+		}	
+		return array;		
+	}
+	
+	static int[] randomArray(int length, int lowerBorder, int upperBorder){
+		int[] array = new int[length];
+		
+		for(int i = 0; i < length ; i++){
+			array[i] = lowerBorder + (int) (Math.random() * upperBorder);
+			//System.out.println("arrayRandom[ " + i +"] = " + array[i] + "; ");
 		}	
 		return array;		
 	}
