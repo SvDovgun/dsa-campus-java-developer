@@ -14,15 +14,15 @@ class MassiveTask {
 		int[] arrayToChar = {74,65,86,65};
 		System.out.println("2 task: Massive of int to char(s) "); 
 		//printIntToChar(arrayToChar);
-		//char[] arrayConvChar = convertIntToChar(arrayToChar);
-		printCh(convertIntToChar(arrayToChar));
+		//char[] arrayConvChar = toCharArray(arrayToChar);
+		printCh(toCharArray(arrayToChar));
 		
 		//3 task
 		int a1 = 32;
 		int b1 = 53;
 		System.out.println("3 task: Max value from two values");
 		System.out.println("a = " + a1 + ";  b = " + b1 + ";");
-		System.out.println("Max int value is " + identifyMaxInt(a1,b1));
+		System.out.println("Max int value is " + max(a1,b1));
 		
 		//4 task
 		int a2 = 52;
@@ -30,7 +30,7 @@ class MassiveTask {
 		int c2 = 43;
 		System.out.println("4 task: Max value from three values");
 		System.out.println("a = " + a2 + ";  b = " + b2 + ";  c = " + c2 + ";");
-		System.out.println("Max int value of 3 is " + identifyMaxInt(a2,b2,c2));
+		System.out.println("Max int value of 3 is " + max(a2,b2,c2));
 		
 		//5 task 
 		int a3 = 64;
@@ -40,7 +40,7 @@ class MassiveTask {
 		int e3 = 32;
 		System.out.println("5 task: Max value from five values");
 		System.out.println("a = " + a3 + ";  b = " + b3 + ";  c = " + c3 + ";  d = " + d3 + ";  e = " + e3 + ";");
-		System.out.println("Max int value of 5 is " + identifyMaxInt(a3,b3,c3,d3,e3));
+		System.out.println("Max int value of 5 is " + max(a3,b3,c3,d3,e3));
 		
 		//6 task		
 		char[] charToStr = {'C', 'a', 'M', 'p', 'U', 'S'};
@@ -49,10 +49,10 @@ class MassiveTask {
 		//8 task
 		int[] arrayMas = {83, 62, 77, 93, 106, 8435, 353, 123, 657, 111};
 		int findElem = 106;
-		System.out.println("8 task: Found int value " + findElem + " in masssive under index = "+ findElementInMassive(arrayMas, findElem));
+		System.out.println("8 task: Found int value " + findElem + " in masssive under index = "+ indexOf(arrayMas, findElem));
 		
 		//9 task
-		System.out.println("9 task: Found int value " + findElem + " in masssive under index from end massive (reversed) = "+ findElementInMassive(reverseMassiveInt(arrayMas), findElem));
+		System.out.println("9 task: Found int value " + findElem + " in masssive under index from end massive (reversed) = "+ indexOf(reverseMassiveInt(arrayMas), findElem));
 		
 		//10 task
 		int intForFactorial = 7;
@@ -81,7 +81,7 @@ class MassiveTask {
 		byte[] byteMas = {34, 43, 12, 94, 127, 34, 92, 94};
 		System.out.println("14 task: check if next massive has duplicated byte values");
 		printByte(byteMas);
-		System.out.println("Result : " + ifDuplicateValuesHas(byteMas) );
+		System.out.println("Result : " + byteArrayMethod(byteMas) );
 		
 		//15 task
 		int[] intMas1 = {1, 2, 3, 4, 5 };
@@ -95,6 +95,7 @@ class MassiveTask {
 		printInt(intMultiplyMass(intMas1, intMas2));
 		
 		//16 task
+		//check each element of first massive in second massive and collect to 3 massive
 		
 		//17 task
 		System.out.println("17 task: Input massive");
@@ -108,6 +109,10 @@ class MassiveTask {
 		printInt(randomArray(7, 25, 250));
 		
 		//19 task
+		// "hello" "ll" => true
+		// "hello" "eo" => false
+
+		
 	}
 	
 	static void printCh(char[] array){
@@ -141,7 +146,7 @@ class MassiveTask {
 		}		
 	}*/
 	
-	static char[] convertIntToChar(int[] array){
+	static char[] toCharArray(int[] array){
 		char[] arrayChar = new char[array.length];
 		System.out.println("Int massive convert to Char with lenght = " + array.length);
 		for(int i = 0; i < array.length ; i++){
@@ -151,27 +156,27 @@ class MassiveTask {
 		return arrayChar;		
 	}
 	
-	static int identifyMaxInt(int first, int second ){
-		int max;
-		if (first > second) {
-			max = first;
-		} else max = second;
-		return max;			
+	static int max(int first, int second ){
+		int max = first >= second ? first : second ;
+		//if (first > second) {
+		//	max = first;
+		//} else max = second;
+		return max;	
+		//  return first > second ? first : second ;
 	}
 	
-	static int identifyMaxInt(int first, int second , int third){
-		int max = identifyMaxInt(first,second);
-		max = identifyMaxInt(max,third);
-		return max;			
+	static int max(int first, int second , int third){
+		return max(max(first,second),third);			
 	}
 	
-	static int identifyMaxInt(int first, int second, int third, int fourth, int fifth){
-		int[] test = {first, second, third, fourth, fifth};
+	static int max(int first, int second, int third, int fourth, int fifth){
+		/*int[] test = {first, second, third, fourth, fifth};
 		int max=0;
 		for(int i = 0; i < test.length  ; i++){
-			max = identifyMaxInt(max, test[i]);
+			max = max(max, test[i]);
 		}	
-		return max;			
+		return max;	*/
+		return max(max(max(first,second),max(third,fourth)), fifth );		
 	}
 	
 	static String charMasToString(char[] array){
@@ -182,7 +187,7 @@ class MassiveTask {
 		return result;
 	}
 	
-	static int findElementInMassive(int[] array, int findElement){
+	static int indexOf(int[] array, int findElement){
 		int result = -1;
 		for(int i = 0; i < array.length ; i++){
 			if (array[i] == findElement) {
@@ -243,12 +248,13 @@ class MassiveTask {
 		return result;
 	}
 	
-	static boolean ifDuplicateValuesHas(byte[] array){
+	static boolean byteArrayMethod(byte[] array){
 		boolean result = false;
 		for(int i = 0; i < array.length ; i++){
 			for(int j = i+1 ; j < array.length - 1 ; j++) {
-				if (array[j] == array[j] ) {
+				if (array[i] == array[j] ) {
 					result = true;
+					System.out.println("Find duplicated element  " + array[i]);
 					break;
 				} 
 			}
