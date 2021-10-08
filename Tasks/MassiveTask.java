@@ -24,7 +24,7 @@ class MassiveTask {
 		System.out.println("a = " + a1 + ";  b = " + b1 + ";");
 		System.out.println("Max int value is " + max(a1,b1));
 		
-		//4 task
+		//4 task 
 		int a2 = 52;
 		int b2 = 33;
 		int c2 = 43;
@@ -112,7 +112,38 @@ class MassiveTask {
 		// "hello" "ll" => true
 		// "hello" "eo" => false
 
-		
+
+		//20 task
+		System.out.println("20 task: Two-dimensional array for sumDiagonal");
+		int[][] twoIntArray = new int[4][];
+		twoIntArray[0] = new int[] {11,2,3,4};
+		twoIntArray[1] = new int[] {4,5,1,1};
+		twoIntArray[2] = new int[] {6,7,8,9};
+		twoIntArray[3] = new int[] {1,4,7,2};
+		printArray(twoIntArray);
+		System.out.println("Sum of Diagonals are equel " + sumDiagonal(twoIntArray));
+
+		//21 task
+		System.out.println("21 task: Two-dimensional array of longs and two-dimensional array of booleans");
+		System.out.println("get array of longs from position where booleans array has true");
+		long[][] twoLongArray = new long[4][];
+		twoLongArray[0] = new long[] {74,84,65,86};
+		twoLongArray[1] = new long[] {79,82,65,87};
+		twoLongArray[2] = new long[] {74,83,86,79};
+		twoLongArray[3] = new long[] {65,88,72,82};
+		boolean[][] twoBooleanArray = new boolean[4][];
+		twoBooleanArray[0] = new boolean[] {true,false,false,false};
+		twoBooleanArray[1] = new boolean[] {false,false,true,false};
+		twoBooleanArray[2] = new boolean[] {false,true,false,false};
+		twoBooleanArray[3] = new boolean[] {true,false,false,false};
+		printLong(getTrueLong(twoLongArray,twoBooleanArray));
+
+
+		//22 task 
+		System.out.println("22 task: Println two-dimensional array");
+		char[][] twoChArray = {{'S',118,105,116,65 },{103, 111},{74,65,86,'A'}};
+		printArray(twoChArray);
+
 	}
 	
 	static void printCh(char[] array){
@@ -133,7 +164,15 @@ class MassiveTask {
 	static void printByte(byte[] array){
 		//System.out.println("Int massive with lenght = " + array.length);
 		for(int i = 0; i < array.length ; i++){
-			System.out.println("int value [" +i+ "] = " + array[i] );
+			System.out.println("byte value [" +i+ "] = " + array[i] );
+		}		
+	}
+
+	static void printLong(long[] array){
+		//System.out.println("Long massive with lenght = " + array.length);
+		for(int i = 0; i < array.length ; i++){
+			long value = array[i];
+			System.out.println("long[" + i +"] = " + value + "; ");
 		}		
 	}
 	
@@ -283,6 +322,70 @@ class MassiveTask {
 			//System.out.println("arrayRandom[ " + i +"] = " + array[i] + "; ");
 		}	
 		return array;		
+	}
+
+	static void printArray(int[][] array){		
+		for (int i = 0 ; i < array.length ; i++){			
+			for (int j = 0 ; j < array[i].length ; j++){
+				System.out.print(" " + array[i][j] + " ");
+			}
+			System.out.println("");
+		}
+	}
+
+	static int sumDiagonal(int[][] array){	
+		int sum = 0;
+		for (int i = 0 ; i < array.length ; i++){
+			for (int j = 0 ; j < array[i].length ; j++){
+				if (i == j) {
+					sum += array[i][j];
+				}
+				if (array[j].length-1-i  == j ) {
+				//	System.out.println("to sum i=" +i + "  j="+j+ "  value=" + array[i][j] + " ");
+					sum += array[i][j];
+				}
+			}
+		}
+		return sum;
+	}
+	
+	static long[] getTrueLong(long[][] twoLongArray, boolean[][] twoBooleanArray){	
+		int length = 0;
+		for (int i = 0 ; i < twoBooleanArray.length ; i++){
+			for (int j = 0 ; j < twoBooleanArray[i].length ; j++){
+				if (twoBooleanArray[i][j]) {
+					length++;
+				}				
+			}
+		}
+
+		System.out.println(" length = " + length + " ");
+
+		long[] array = new long[length];
+		int arrayIndex=0;
+
+		for (int i = 0 ; i < twoBooleanArray.length ; i++){
+			for (int j = 0 ; j < twoBooleanArray[i].length ; j++){
+				if (twoBooleanArray[i][j]) {
+					array[arrayIndex] = twoLongArray[i][j];
+					arrayIndex++;
+				}				
+			}
+		}
+		
+
+		return array;
+	}
+
+	static void printArray(char[][] array){
+		//for (char[] row1: array){
+		for (int i = 0 ; i < array.length ; i++){
+			//for (char column: row1){
+			for (int j = 0 ; j < array[i].length ; j++){
+				System.out.print(" " + array[i][j] + " ");
+			}
+			System.out.println("");
+		}
 	}
 
 }
