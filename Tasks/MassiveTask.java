@@ -146,6 +146,7 @@ class MassiveTask {
 
 	}
 	
+	// 1 task
 	static void printCh(char[] array){
 		System.out.println("Char massive with lenght = " + array.length);
 		for(int i = 0; i < array.length ; i++){
@@ -185,6 +186,7 @@ class MassiveTask {
 		}		
 	}*/
 	
+	// 2 task
 	static char[] toCharArray(int[] array){
 		char[] arrayChar = new char[array.length];
 		System.out.println("Int massive convert to Char with lenght = " + array.length);
@@ -195,6 +197,7 @@ class MassiveTask {
 		return arrayChar;		
 	}
 	
+	// 3 task 
 	static int max(int first, int second ){
 		int max = first >= second ? first : second ;
 		//if (first > second) {
@@ -204,10 +207,12 @@ class MassiveTask {
 		//  return first > second ? first : second ;
 	}
 	
+	// 4 task
 	static int max(int first, int second , int third){
 		return max(max(first,second),third);			
 	}
 	
+	// 5 task
 	static int max(int first, int second, int third, int fourth, int fifth){
 		/*int[] test = {first, second, third, fourth, fifth};
 		int max=0;
@@ -218,6 +223,7 @@ class MassiveTask {
 		return max(max(max(first,second),max(third,fourth)), fifth );		
 	}
 	
+	// 6 task
 	static String charMasToString(char[] array){
 		String result = "";
 		for(int i = 0; i < array.length ; i++){
@@ -226,6 +232,7 @@ class MassiveTask {
 		return result;
 	}
 	
+	// 8 task  + 9 task(after reverse)
 	static int indexOf(int[] array, int findElement){
 		int result = -1;
 		for(int i = 0; i < array.length ; i++){
@@ -236,6 +243,7 @@ class MassiveTask {
 		return result;
 	}
 	
+	// 17 task + for 9 task
 	static int[] reverseMassiveInt(int[] array){
 		int[] reverse = new int[array.length];
 		for(int i = 0; i < array.length ; i++){
@@ -245,6 +253,39 @@ class MassiveTask {
 		
 	}
 	
+	
+	// 10 task
+	static int factorialOfInt(int intValue){
+		int result = 1;
+		for(int i = 1; i <= intValue ; i++){
+			result = result * i;
+		} 
+		return result;			
+	}
+	
+	// 11 task , add validation?
+	static boolean ifYearLeap(int intValue){
+		boolean result ;
+		if ((intValue % 4) == 0) { 
+			result = true;
+		} else result = false;
+		return result;			
+	}
+	
+	// 12 task 
+	static String aliquotValues(int[] array, int aliquotValue){
+		String result = "";
+		for(int i = 0; i < array.length ; i++){
+			if (array[i] % aliquotValue == 0 ) {
+				result = result + array[i] + "; "; 
+				//System.out.print(array[i] + " ");
+			}			 
+		}	
+		System.out.println();
+		return result;
+	}
+	
+	//13 task
 	static int[] sortedMassiveIntAsc(int[] array){
 		for(int i = array.length - 1; i > 0 ; i--){
 			for(int j = 0 ; j < i ; j++) {
@@ -258,35 +299,8 @@ class MassiveTask {
 		return array;
 		
 	}
-	
-	static int factorialOfInt(int intValue){
-		int result = 1;
-		for(int i = 1; i <= intValue ; i++){
-			result = result * i;
-		} 
-		return result;			
-	}
-	
-	static boolean ifYearLeap(int intValue){
-		boolean result ;
-		if ((intValue % 4) == 0) { 
-			result = true;
-		} else result = false;
-		return result;			
-	}
-	
-	static String aliquotValues(int[] array, int aliquotValue){
-		String result = "";
-		for(int i = 0; i < array.length ; i++){
-			if (array[i] % aliquotValue == 0 ) {
-				result = result + array[i] + "; "; 
-				//System.out.print(array[i] + " ");
-			}			 
-		}	
-		System.out.println();
-		return result;
-	}
-	
+
+	//14 task
 	static boolean byteArrayMethod(byte[] array){
 		boolean result = false;
 		for(int i = 0; i < array.length ; i++){
@@ -301,6 +315,7 @@ class MassiveTask {
 		return result;			
 	}
 	
+	//15 task
 	static int[] intMultiplyMass(int[] array1, int[] array2){
 		int[] array = new int[array1.length];
 		if (array1.length != array2.length){
@@ -313,7 +328,8 @@ class MassiveTask {
 		}	
 		return array;		
 	}
-	
+
+	// 18 task
 	static int[] randomArray(int length, int lowerBorder, int upperBorder){
 		int[] array = new int[length];
 		
@@ -324,6 +340,7 @@ class MassiveTask {
 		return array;		
 	}
 
+	//21 task
 	static void printArray(int[][] array){		
 		for (int i = 0 ; i < array.length ; i++){			
 			for (int j = 0 ; j < array[i].length ; j++){
@@ -332,7 +349,7 @@ class MassiveTask {
 			System.out.println("");
 		}
 	}
-
+	//21 task
 	static int sumDiagonal(int[][] array){	
 		int sum = 0;
 		for (int i = 0 ; i < array.length ; i++){
@@ -348,7 +365,7 @@ class MassiveTask {
 		}
 		return sum;
 	}
-	
+	//21 task
 	static long[] getTrueLong(long[][] twoLongArray, boolean[][] twoBooleanArray){	
 		int length = 0;
 		for (int i = 0 ; i < twoBooleanArray.length ; i++){
@@ -376,7 +393,7 @@ class MassiveTask {
 
 		return array;
 	}
-
+	//22 task 
 	static void printArray(char[][] array){
 		//for (char[] row1: array){
 		for (int i = 0 ; i < array.length ; i++){
