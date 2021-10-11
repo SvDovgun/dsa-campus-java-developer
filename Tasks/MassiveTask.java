@@ -264,7 +264,7 @@ class MassiveTask {
 	}
 	
 	// 11 task , add validation?
-	static boolean ifYearLeap(int intValue){
+	static boolean ifYearLeap(int intValue){ // 400 or 100 ?
 		boolean result ;
 		if ((intValue % 4) == 0) { 
 			result = true;
@@ -349,7 +349,7 @@ class MassiveTask {
 			System.out.println("");
 		}
 	}
-	//21 task
+	//20 task
 	static int sumDiagonal(int[][] array){	
 		int sum = 0;
 		for (int i = 0 ; i < array.length ; i++){
