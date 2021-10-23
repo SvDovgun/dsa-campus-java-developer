@@ -6,33 +6,43 @@ class MassiveTask {
 		//int[] array = generateRandom(10);
 		
 		//1 task
+		System.out.println("      ");
+		System.out.println("*****");
 		char[] arrayChar = {'S','V','i','T', 'L', 'a', 'N', 'a'};		
 		System.out.println("1 task: Massive of char(s) "); 
-		printCh(arrayChar);
+		print(arrayChar);
 		
 		//2 task
+		System.out.println("      ");
+		System.out.println("*****");
 		int[] arrayToChar = {74,65,86,65};
 		System.out.println("2 task: Massive of int to char(s) "); 
 		//printIntToChar(arrayToChar);
 		//char[] arrayConvChar = toCharArray(arrayToChar);
-		printCh(toCharArray(arrayToChar));
+		print(toCharArray(arrayToChar));
 		
 		//3 task
+		System.out.println("      ");
+		System.out.println("*****");
 		int a1 = 32;
 		int b1 = 53;
 		System.out.println("3 task: Max value from two values");
 		System.out.println("a = " + a1 + ";  b = " + b1 + ";");
 		System.out.println("Max int value is " + max(a1,b1));
 		
-		//4 task 
+		//4 task
+		System.out.println("      ");
+		System.out.println("*****");
 		int a2 = 52;
 		int b2 = 33;
 		int c2 = 43;
 		System.out.println("4 task: Max value from three values");
 		System.out.println("a = " + a2 + ";  b = " + b2 + ";  c = " + c2 + ";");
-		System.out.println("Max int value of 3 is " + max(a2,b2,c2));
+		System.out.println("Max int value of 3 values is " + max(a2,b2,c2));
 		
-		//5 task 
+		//5 task
+		System.out.println("      ");
+		System.out.println("*****");
 		int a3 = 64;
 		int b3 = 84;
 		int c3 = 17;
@@ -40,79 +50,126 @@ class MassiveTask {
 		int e3 = 32;
 		System.out.println("5 task: Max value from five values");
 		System.out.println("a = " + a3 + ";  b = " + b3 + ";  c = " + c3 + ";  d = " + d3 + ";  e = " + e3 + ";");
-		System.out.println("Max int value of 5 is " + max(a3,b3,c3,d3,e3));
+		System.out.println("Max int value of 5 values is " + max(a3,b3,c3,d3,e3));
 		
-		//6 task		
+		//6 task
+		System.out.println("      ");
+		System.out.println("*****");
 		char[] charToStr = {'C', 'a', 'M', 'p', 'U', 'S'};
 		System.out.println("6 task: Pring char elements as String = "+ charMasToString(charToStr));
 		
 		//8 task
+		System.out.println("      ");
+		System.out.println("*****");
 		int[] arrayMas = {83, 62, 77, 93, 106, 8435, 353, 123, 657, 111};
 		int findElem = 106;
 		System.out.println("8 task: Found int value " + findElem + " in masssive under index = "+ indexOf(arrayMas, findElem));
 		
 		//9 task
-		System.out.println("9 task: Found int value " + findElem + " in masssive under index from end massive (reversed) = "+ indexOf(reverseMassiveInt(arrayMas), findElem));
+		System.out.println("      ");
+		System.out.println("*****");
+		System.out.println("9 task: Found int value " + findElem + " in masssive under index from end massive (reversed) = "+ indexOf(reverse(arrayMas), findElem));
 		
 		//10 task
+		System.out.println("      ");
+		System.out.println("*****");
 		int intForFactorial = 7;
-		System.out.println("10 task: factorial for " + intForFactorial + " = " + factorialOfInt(intForFactorial));
+		System.out.println("10 task: factorial for " + intForFactorial + " = " + factorial(intForFactorial));
 		
 		//11 task
+		System.out.println("      ");
+		System.out.println("*****");
 		int year = 2021;
 		System.out.println("11 task: Is " + year + " the leap year? Answer: " + ifYearLeap(year));
 		
 		//12 task
+		System.out.println("      ");
+		System.out.println("*****");
 		int[] massiveInt = {463, 473, 27, 4684,16, 400, 403};
 		System.out.println("12 task: have next massive int(s)"); 
-		printInt(massiveInt);
+		print(massiveInt);
 		int aliquotValue = 4;
 		System.out.println(" Next value from defined massive are aliquot for defined " + aliquotValue + " : " + aliquotValues(massiveInt, aliquotValue));
 		System.out.println();
 		
 		//13 task
+		System.out.println("      ");
+		System.out.println("*****");
 		int[] intToSort = {2543, 463, 473, 27, 484,165, 400, 403, 23};
 		System.out.println("13 task: Sort next massive by asc");
-		printInt(intToSort);
+		print(intToSort);
 		System.out.println("Below massive after sorted by ASC: ");
-		printInt(sortedMassiveIntAsc(intToSort));
+		print(sortedMassiveIntAsc(intToSort));
 		
 		//14 task
+		System.out.println("      ");
+		System.out.println("*****");
 		byte[] byteMas = {34, 43, 12, 94, 127, 34, 92, 94};
 		System.out.println("14 task: check if next massive has duplicated byte values");
-		printByte(byteMas);
+		print(byteMas);
 		System.out.println("Result : " + byteArrayMethod(byteMas) );
-		
+
+		System.out.println("      ");
+		System.out.println("*****");
 		//15 task
 		int[] intMas1 = {1, 2, 3, 4, 5 };
 		int[] intMas2 = {11, 22, 33, 44, 50 };
 		System.out.println("15 task: Lts multiply next few massive (their size are equal) : ");
 		System.out.println("Massive 1:");
-		printInt(intMas1);
+		print(intMas1);
 		System.out.println("Massive 2:");
-		printInt(intMas2);
+		print(intMas2);
 		System.out.println("Result Massive:");
-		printInt(intMultiplyMass(intMas1, intMas2));
-		
+		print(intMultiplyMass(intMas1, intMas2));
+
+		System.out.println("      ");
+		System.out.println("*****");
 		//16 task
-		//check each element of first massive in second massive and collect to 3 massive
-		
+		//check each element of two massives and collect unique values to third massive
+		System.out.println("16 task: check each element of two massives and collect unique values to third massive");
+		int[] intMasFirst = {7, 8, 3, 4, 5, 7 , 1};
+		System.out.println("Massive 1:");
+		print(intMasFirst);
+		int[] intMasSec = {3, 6, 1, 5, 8 , 9, 6 };
+		System.out.println("Massive 2:");
+		print(intMasSec);
+		System.out.println("Result Massive:");
+		print( unique(intMasFirst, intMasSec)) ;
+
+		System.out.println("      ");
+		System.out.println("*****");
 		//17 task
 		System.out.println("17 task: Input massive");
 		int[] arrayMas3 = {83, 62, 77, 93, 106, 8435, 353, 123, 657, 111};
-		printInt(arrayMas3);		
+		print(arrayMas3);
 		System.out.println("     Reversed Massive ");
-		printInt(reverseMassiveInt(arrayMas3));
-		
+		print(reverse(arrayMas3));
+
+		System.out.println("      ");
+		System.out.println("*****");
 		//18 task
-		System.out.println("18 task: Random Array with parameters");
-		printInt(randomArray(7, 25, 250));
+		int length = 7;
+		int lowerBorder = 25;
+		int upperBorder = 250;
+		System.out.println("18 task: Random Array with parameters : length = "+length+ "; lowerBorder = "+ lowerBorder + "; upperBorder = " + upperBorder );
+		print(randomArray(length, lowerBorder, upperBorder));
 		
 		//19 task
-		// "hello" "ll" => true
+		System.out.println("      ");
+		System.out.println("*****");
+		System.out.println("19 task: Contains one chars in another char massive ");
+		// "hello" "ell" => true
 		// "hello" "eo" => false
+		char[] content = "Hello".toCharArray();
+		char[] subContentTrue= "ell".toCharArray();
+		char[] subContentFalse = "eo".toCharArray();
+		System.out.println("check if '" + charMasToString(content) + "' contains '" + charMasToString(subContentTrue) +"'" );
+		System.out.println("     Result: " + contains(content, subContentTrue));
+		System.out.println("check if '" + charMasToString(content) + "'  contains '" + charMasToString(subContentFalse)+"'" );
+		System.out.println("     Result: " + contains(content, subContentFalse));
 
-
+		System.out.println("      ");
+		System.out.println("*****");
 		//20 task
 		System.out.println("20 task: Two-dimensional array for sumDiagonal");
 		int[][] twoIntArray = new int[4][];
@@ -123,6 +180,8 @@ class MassiveTask {
 		printArray(twoIntArray);
 		System.out.println("Sum of Diagonals are equel " + sumDiagonal(twoIntArray));
 
+		System.out.println("      ");
+		System.out.println("*****");
 		//21 task
 		System.out.println("21 task: Two-dimensional array of longs and two-dimensional array of booleans");
 		System.out.println("get array of longs from position where booleans array has true");
@@ -136,9 +195,10 @@ class MassiveTask {
 		twoBooleanArray[1] = new boolean[] {false,false,true,false};
 		twoBooleanArray[2] = new boolean[] {false,true,false,false};
 		twoBooleanArray[3] = new boolean[] {true,false,false,false};
-		printLong(getTrueLong(twoLongArray,twoBooleanArray));
+		print(getTrueLong(twoLongArray,twoBooleanArray));
 
-
+		System.out.println("      ");
+		System.out.println("*****");
 		//22 task 
 		System.out.println("22 task: Println two-dimensional array");
 		char[][] twoChArray = {{'S',118,105,116,65 },{103, 111},{74,65,86,'A'}};
@@ -147,7 +207,7 @@ class MassiveTask {
 	}
 	
 	// 1 task
-	static void printCh(char[] array){
+	static void print(char[] array){
 		System.out.println("Char massive with lenght = " + array.length);
 		for(int i = 0; i < array.length ; i++){
 			char value = array[i];
@@ -155,21 +215,21 @@ class MassiveTask {
 		}		
 	}
 	
-	static void printInt(int[] array){
+	static void print(int[] array){
 		//System.out.println("Int massive with lenght = " + array.length);
 		for(int i = 0; i < array.length ; i++){
 			System.out.println("int value [" +i+ "] = " + array[i] );
 		}		
 	}
 	
-	static void printByte(byte[] array){
+	static void print(byte[] array){
 		//System.out.println("Int massive with lenght = " + array.length);
 		for(int i = 0; i < array.length ; i++){
 			System.out.println("byte value [" +i+ "] = " + array[i] );
 		}		
 	}
 
-	static void printLong(long[] array){
+	static void print(long[] array){
 		//System.out.println("Long massive with lenght = " + array.length);
 		for(int i = 0; i < array.length ; i++){
 			long value = array[i];
@@ -189,7 +249,7 @@ class MassiveTask {
 	// 2 task
 	static char[] toCharArray(int[] array){
 		char[] arrayChar = new char[array.length];
-		System.out.println("Int massive convert to Char with lenght = " + array.length);
+		//System.out.println("Int massive convert to Char with lenght = " + array.length);
 		for(int i = 0; i < array.length ; i++){
 			arrayChar[i] = (char) array[i];
 		//	System.out.println("arrayChar[ " + i +"] = " + arrayChar[i] + "; ");
@@ -244,7 +304,7 @@ class MassiveTask {
 	}
 	
 	// 17 task + for 9 task
-	static int[] reverseMassiveInt(int[] array){
+	static int[] reverse(int[] array){
 		int[] reverse = new int[array.length];
 		for(int i = 0; i < array.length ; i++){
 			reverse[i] = array[array.length -1 - i] ;						
@@ -255,7 +315,7 @@ class MassiveTask {
 	
 	
 	// 10 task
-	static int factorialOfInt(int intValue){
+	static int factorial(int intValue){
 		int result = 1;
 		for(int i = 1; i <= intValue ; i++){
 			result = result * i;
@@ -264,12 +324,12 @@ class MassiveTask {
 	}
 	
 	// 11 task , add validation?
-	static boolean ifYearLeap(int intValue){ // 400 or 100 ?
-		boolean result ;
-		if ((intValue % 4) == 0) { 
-			result = true;
-		} else result = false;
-		return result;			
+	static boolean ifYearLeap(int year){ // 400 or 100 ?
+		//boolean result ;
+		//if ((year % 400) == 0 || (year % 4) == 0 && (year % 100) != 0) {
+		//	result = true;
+		//} else result = false;
+		return ((year % 400) == 0 || (year % 4) == 0 && (year % 100) != 0);
 	}
 	
 	// 12 task 
@@ -329,6 +389,50 @@ class MassiveTask {
 		return array;		
 	}
 
+	// 16 task
+	static int[] unique(int[] arrayFirst, int[] arraySecond){
+		int[] uniqueArray= new int[arrayFirst.length + arraySecond.length];
+		int count = 0;
+		boolean isUnique = false;
+
+		for (int i = 0; i < arrayFirst.length; i++) {
+			for (int j = 0; j < arraySecond.length; j++) {
+				if (arrayFirst[i] == arraySecond[j]) {
+					isUnique = false;
+					break;
+				} else {
+					isUnique = true;
+				}
+			}
+			if (isUnique) {
+				uniqueArray[count] = arrayFirst[i];
+				count++;
+			}
+		}
+
+		for (int i = 0; i < arraySecond.length; i++) {
+			for (int j = 0; j < arrayFirst.length; j++) {
+				if (arraySecond[i] == arrayFirst[j]) {
+					isUnique = false;
+					break;
+				} else {
+					isUnique = true;
+				}
+			}
+			if (isUnique) {
+				uniqueArray[count] = arraySecond[i];
+				count++;
+			}
+		}
+
+		int[] resultArray = new int[count];
+		for (int i = 0; i < count; i++) {
+			resultArray[i] =uniqueArray[i];
+		}
+
+		return resultArray;
+	}
+
 	// 18 task
 	static int[] randomArray(int length, int lowerBorder, int upperBorder){
 		int[] array = new int[length];
@@ -338,6 +442,23 @@ class MassiveTask {
 			//System.out.println("arrayRandom[ " + i +"] = " + array[i] + "; ");
 		}	
 		return array;		
+	}
+
+	// 19 task
+	static boolean contains(char[] content, char[] subContent) {
+		int counter = 0;
+		for (int i = 0; i < content.length; i++) {
+			if (content[i] == subContent[counter]) {
+				counter++;
+			} else {
+				counter = 0;
+			}
+
+			if (counter == subContent.length) {
+				return  true;
+			}
+		}
+		return  false;
 	}
 
 	//21 task
