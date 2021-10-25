@@ -101,12 +101,13 @@ public class EmployeeService {
     Employee addEmployee(Employee addEmployee) {
         Employee[] newEmployeesArray = new Employee[employees.length + 1];
 
-        for (int i = 0; i < employees.length -1; i++) {
+        for (int i = 0; i < employees.length ; i++) {
             newEmployeesArray[i] = employees[i];
         }
 
-        employees = newEmployeesArray;
         newEmployeesArray[newEmployeesArray.length-1] = addEmployee;
+        employees = newEmployeesArray;
+     //   System.out.println(" new one " + addEmployee.toString());
         return addEmployee;
 
     }

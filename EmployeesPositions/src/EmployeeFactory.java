@@ -51,24 +51,23 @@ public class EmployeeFactory {
         return new Random().nextInt(22) + 1;
     }
 
-    Employee generateEmployee() {
+    public Employee generateEmployee() {
         int random = (new Random()).nextInt(3);
         String gender = generateGender();
-        System.out.println(" random " + random);
-        switch (random) {
-            case 0:
-                return new Developer(generateId(), generateName(gender), generateAge(), generateSalary(), gender, generateFixedBugs());
-            case 1:
-                return new Manager(generateId(), generateName(gender), generateAge(), generateSalary(), gender);
-            case 2:
-                return new Designer(generateId(), generateName(gender), generateAge(), generateSalary(), gender, generateRate(), generateWorkedDays());
+     //   System.out.println(" random " + random);
+        if (random == 0 ) {
+            return new Manager(generateId(), generateName(gender), generateAge(), generateSalary(), gender);
+        } else if (random == 1 ) {
+            return new Developer(generateId(), generateName(gender), generateAge(), generateSalary(), gender, generateFixedBugs());
+        } else if (random == 2)  {
+            return new Designer(generateId(), generateName(gender), generateAge(), generateSalary(), gender, generateRate(), generateWorkedDays());
+        } else {
+            return null;
         }
-        return null;
 
-       // return  new Employee(generateId(),generateName(), generateAge(), generateSalary(), generateGender())  ;
     }
 
-    Employee[] generateEmployees(int size) {
+    public Employee[] generateEmployees(int size) {
         Employee[] employees = new Employee[size];
         for (int i = 0; i < employees.length; i++) {
             employees[i] = generateEmployee();

@@ -13,7 +13,7 @@ public class Test {
         System.out.println(" --------------   The required money for employees' salary and bonus ------------ ");
         int calculateSalaryAndBonus = (int) employeeService.calculateSalaryAndBonus();
         System.out.println("calculated Salary And Bonus = " + calculateSalaryAndBonus);
-        //employeeService.calculateSalaryAndBonus();  // tbd
+
 
         System.out.println(" --------------   Return the employee info by ID  ------------ ");
         long idSearch = 3;
