@@ -58,23 +58,21 @@ public class EmployeeService {
         return employees;
     }
 
-    Employee[] sortByNameAndSalary() {
-        EmployeeService empService = new EmployeeService(employees);
-        Employee[] employee = empService.sortByName();
+    public Employee[] sortByNameAndSalary() {
         Employee temp;
         boolean isSorted = true;
         while (isSorted) {
             isSorted = false;
-            for (int i = 0; i < employee.length - 1; i++) {
-                if (employee[i].name.equals(employee[i + 1].name) && employee[i].salary > employee[i + 1].salary) {
+            for (int i = 0; i < employees.length - 1; i++) {
+                if (employees[i].name.equals(employees[i + 1].name) && employees[i].salary > employees[i + 1].salary) {
                     isSorted = true;
-                    temp = employee[i];
-                    employee[i] = employee[i + 1];
-                    employee[i + 1] = temp;
+                    temp = employees[i];
+                    employees[i] = employees[i + 1];
+                    employees[i + 1] = temp;
                 }
             }
         }
-        return employee;
+        return employees;
     }
 
 
