@@ -21,12 +21,12 @@ public class Designer extends  Employee{
     public String toString() {
         return "Designer {" +
                 " id=" + id +
-                ", name='" + name +
+                ", name='" + name + '\'' +
                 ", age=" + age +
                 ", salary=" + salary +
-                ", gender='" + gender  +
-                ", rate='" + rate  +
-                ", workedDays='" + workedDays  +
+                ", gender='" + gender  + '\'' +
+                ", rate=" + rate  +
+                ", workedDays=" + workedDays  +
                 '}';
     }
 }

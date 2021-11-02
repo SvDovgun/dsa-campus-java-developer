@@ -96,7 +96,7 @@ public class Employee {
                 ", name='" + name + '\'' +
                 ", age=" + age +
                 ", salary=" + salary +
-                ", gender=" + gender +
+                ", gender='" + gender +'\'' +
              //   ", fixedBugs=" + fixedBugs +
              //   ", defaultBugRate=" + defaultBugRate +
               //  ", Bonus=" + getBonus() +

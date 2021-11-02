@@ -6,7 +6,7 @@ public class Test {
 //        System.out.println(employee);
 
         EmployeeFactory employeeFactory = new EmployeeFactory();
-        EmployeeService employeeService = new EmployeeService(employeeFactory.generateEmployees(7));
+        EmployeeService employeeService = new EmployeeService(employeeFactory.generateEmployees(25));
         System.out.println(" --------------   The list of new employees  ------------ ");
         employeeService.printEmployees();
 
@@ -29,6 +29,10 @@ public class Test {
 
         System.out.println("--------------    Sort by Name all list  --------------------");
         employeeService.sortByName();
+        employeeService.printEmployees();
+
+        System.out.println("--------------    Sort by Name and Salary all list  --------------------");
+        employeeService.sortByNameAndSalary();
         employeeService.printEmployees();
 
 

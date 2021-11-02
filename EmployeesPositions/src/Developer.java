@@ -23,11 +23,11 @@ public class Developer extends  Employee{
     public String toString() {
         return "Developer {" +
                 " id=" + id +
-                ", name='" + name +
+                ", name='" + name + '\'' +
                 ", age=" + age +
                 ", salary=" + salary +
-                ", gender='" + gender +
-                ", fixedBugs='" + fixedBugs +
+                ", gender='" + gender + '\'' +
+                ", fixedBugs=" + fixedBugs +
                 '}';
     }
 }
